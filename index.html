@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+    <script>
+
+        // let promise = new Promise(function(resolve,reject){
+        //     resolve("successful")
+        //     reject("not successful")
+        // })
+
+        checkValue(8).then(function(){
+
+            alert('Do sumln')
+        }).catch(function(error){
+            alert(error)
+        })
+            
+        function checkValue(v){
+            return new Promise(function (resolve,reject){
+                if(v > 10){
+                    resolve(alert("The number is greater than 10"))
+                }else{
+                    reject(new Error("Number too low"))
+                }
+            })
+        }
+    </script>
+</body>
+</html>
